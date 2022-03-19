@@ -50,6 +50,7 @@ $content_query = $connection->prepare("SELECT * FROM articule
 
 $content_query->execute();
 $content_query = $content_query->fetchAll(); //@ para que nos muestre todo
+
 //print_r($content_query); 
 //# Redireccionamos al usuario, en caso de que no exista el num de pagina ingresada
 if(!$content_query){
@@ -63,6 +64,7 @@ $totalarticule = $totalarticule->fetch()['total'];
 //# sirve para obtener el total de paginas
 $totalpage = ceil($totalarticule / $postForPage);
 
+// # Se deja comentado porque mostraremos desde el front el texto correspondiente para la cantidad de paginas
 //echo '<p class="bg-primary text-white">pagina ' . $page . ' de ' . $totalpage . ' paginas ('. $totalarticule .' Articulos)' .'</p>';
 
   require_once 'index_view.php';

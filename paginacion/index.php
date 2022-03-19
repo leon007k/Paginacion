@@ -36,8 +36,9 @@
     echo 'algo salio mal, favor de ponerse en contacto con su servidor' . $e->getMessage(); 
     die();
   }
-
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1; //# sirve para indicar en que pagina estamos
+  
+//# sirve para indicar en que pagina estamos
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1; 
 $postForPage = 10; //# sirve para mostrar la cantidad de articulos por pagina
 
 //# sirve para indicar el comienzo de los articulos a mostrar

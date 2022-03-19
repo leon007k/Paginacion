@@ -1,6 +1,5 @@
 <?php
 
-
   # Realizamos la conexion a la bd y comenzamos a llenar la tabla articule mediante un arreglo 
   try {
     $connection = new PDO('mysql:host=localhost;dbname=pagination','root','');
@@ -34,7 +33,7 @@
 /* $easy->execute(); */
   
   }catch(PDOException $e){
-    echo 'algo salio mal' . $e->getMessage(); 
+    echo 'algo salio mal, favor de ponerse en contacto con su servidor' . $e->getMessage(); 
     die();
   }
 
